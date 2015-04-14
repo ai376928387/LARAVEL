@@ -1,0 +1,394 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.10
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:8889
+-- Generation Time: Apr 14, 2015 at 01:34 PM
+-- Server version: 5.5.38
+-- PHP Version: 5.6.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `cheesecake`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+`id` int(64) NOT NULL,
+  `fid` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `url` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `keyword` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `fid`, `name`, `url`, `keyword`, `created_at`, `updated_at`) VALUES
+(1, '|0', 'English', '', '', '2014-04-03 12:08:54', '0000-00-00 00:00:00'),
+(2, '|0', '中文', '', '', '2014-04-03 12:32:45', '0000-00-00 00:00:00'),
+(3, '|0|1', 'Antiques & Collectables', '', '', '2014-04-03 12:10:13', '0000-00-00 00:00:00'),
+(4, '|0|1', 'Art', '', '', '2014-04-03 12:10:13', '0000-00-00 00:00:00'),
+(5, '|0|1', 'Baby Gear', '', '', '2014-04-03 12:14:55', '0000-00-00 00:00:00'),
+(6, '|0|1', 'Books', '', '', '2014-04-03 12:14:55', '0000-00-00 00:00:00'),
+(9, '|0|1', 'Building & Renovation', '', '', '2014-04-03 12:36:54', '0000-00-00 00:00:00'),
+(10, '|0|1', 'Business & Industry', '', '', '2014-04-03 12:36:54', '0000-00-00 00:00:00'),
+(11, '|0|1', 'Cars & Bikes & Boats', '', '', '2014-04-03 12:38:03', '0000-00-00 00:00:00'),
+(12, '|0|1', 'Clothing & Fashion', '', '', '2014-04-03 12:38:03', '0000-00-00 00:00:00'),
+(13, '|0|1', 'Computers', '', '', '2014-04-03 12:40:19', '0000-00-00 00:00:00'),
+(14, '|0|1', 'Crafts', '', '', '2014-04-03 12:40:19', '0000-00-00 00:00:00'),
+(15, '|0|1', 'Electronics & Photography', '', '', '2014-04-03 12:40:19', '0000-00-00 00:00:00'),
+(16, '|0|1', 'Farming', '', '', '2014-04-03 12:40:19', '0000-00-00 00:00:00'),
+(17, '|0|1', 'Flatmates Wanted', '', '', '2014-04-03 12:40:19', '0000-00-00 00:00:00'),
+(18, '|0|1', 'Gaming', '', '', '2014-04-03 12:40:19', '0000-00-00 00:00:00'),
+(19, '|0|1', 'Health & Beauty', '', '', '2014-04-03 12:40:19', '0000-00-00 00:00:00'),
+(20, '|0|1', 'Home & Living', '', '', '2014-04-03 12:40:19', '0000-00-00 00:00:00'),
+(21, '|0|1', 'Jewellery & Watches', '', '', '2014-04-03 12:40:19', '0000-00-00 00:00:00'),
+(22, '|0|1', 'Jobs', '', '', '2014-04-03 12:40:19', '0000-00-00 00:00:00'),
+(23, '|0|1', 'Mobile Phones', '', '', '2014-04-03 12:43:12', '0000-00-00 00:00:00'),
+(24, '|0|1', 'Movies & TV', '', '', '2014-04-03 13:29:50', '0000-00-00 00:00:00'),
+(25, '|0|1', 'Music & Instruments', '', '', '2014-04-03 13:30:01', '0000-00-00 00:00:00'),
+(26, '|0|1', 'Pets & Animals', '', '', '2014-04-03 13:31:08', '0000-00-00 00:00:00'),
+(27, '|0|1', 'Pottery & Glass', '', '', '2014-04-03 13:30:46', '0000-00-00 00:00:00'),
+(28, '|0|1', 'Real Estate', '', '', '2014-04-03 13:30:39', '0000-00-00 00:00:00'),
+(29, '|0|1', 'Services', '', '', '2014-04-03 13:30:31', '0000-00-00 00:00:00'),
+(30, '|0|1', 'Sports', '', '', '2014-04-03 13:30:24', '0000-00-00 00:00:00'),
+(31, '|0|1', 'Toys & Models', '', '', '2014-04-03 13:30:17', '0000-00-00 00:00:00'),
+(32, '|0|1', 'Travel, Events & Activities', '', '', '2014-04-03 13:30:07', '0000-00-00 00:00:00'),
+(38, '|0|1|4', 'Art supplies & equipment', '', '', '2014-04-03 12:51:04', '0000-00-00 00:00:00'),
+(39, '|0|1|4', 'Carvings & sculpture', '', '', '2014-04-03 12:51:04', '0000-00-00 00:00:00'),
+(40, '|0|1|4', 'Drawings', '', '', '2014-04-03 12:51:04', '0000-00-00 00:00:00'),
+(41, '|0|1|4', 'Hanging sculptures', '', '', '2014-04-03 12:51:04', '0000-00-00 00:00:00'),
+(42, '|0|1|4', 'Paintings', '', '', '2014-04-03 12:51:04', '0000-00-00 00:00:00'),
+(43, '|0|1|4', 'Photographs', '', '', '2014-04-03 12:51:04', '0000-00-00 00:00:00'),
+(44, '|0|1|4', 'Prints', '', '', '2014-04-03 12:51:04', '0000-00-00 00:00:00'),
+(45, '|0|1|4', 'Tattoos', '', '', '2014-04-03 12:51:04', '0000-00-00 00:00:00'),
+(46, '|0|1|4', 'Other', '', '', '2014-04-03 12:51:04', '0000-00-00 00:00:00'),
+(47, '|0|2', '艺术', '', '艺术', '2014-05-24 13:50:47', '0000-00-00 00:00:00'),
+(48, '|0|2', '古董和收藏品', '', '', '2014-05-24 14:01:45', '0000-00-00 00:00:00'),
+(49, '|0|2', '婴儿用品', '', '', '2014-05-24 13:53:16', '0000-00-00 00:00:00'),
+(52, '|0|2', '书籍', '', '', '2014-05-24 14:15:23', '0000-00-00 00:00:00'),
+(53, '|0|2', '建筑和装修', '', '', '2014-05-24 14:15:23', '0000-00-00 00:00:00'),
+(54, '|0|2', '工商业', '', '', '2014-05-24 14:15:23', '0000-00-00 00:00:00'),
+(55, '|0|2', '汽车与自行车及船', '', '', '2014-05-24 14:15:23', '0000-00-00 00:00:00'),
+(56, '|0|2', '服装服饰', '', '', '2014-05-24 14:15:23', '0000-00-00 00:00:00'),
+(62, '|0|2', '计算机', '', '', '2014-05-24 14:20:28', '0000-00-00 00:00:00'),
+(63, '|0|2', '工艺品', '', '', '2014-05-24 14:20:28', '0000-00-00 00:00:00'),
+(64, '|0|2', '电子产品与摄影', '', '', '2014-05-24 14:20:28', '0000-00-00 00:00:00'),
+(65, '|0|2', '农业', '', '', '2014-05-24 14:20:28', '0000-00-00 00:00:00'),
+(66, '|0|2', '诚征室友', '', '', '2014-05-24 14:20:28', '0000-00-00 00:00:00'),
+(67, '|0|2', '赌博及游戏', '', '', '2014-05-24 14:22:44', '0000-00-00 00:00:00'),
+(68, '|0|2', '健康与美容', '', '', '2014-05-24 14:22:44', '0000-00-00 00:00:00'),
+(69, '|0|2', '家居生活', '', '', '2014-05-24 14:22:44', '0000-00-00 00:00:00'),
+(70, '|0|2', '珠宝首饰及钟表', '', '', '2014-05-24 14:22:44', '0000-00-00 00:00:00'),
+(71, '|0|2', '工作类', '', '', '2014-05-24 14:22:44', '0000-00-00 00:00:00'),
+(72, '|0|2', '手机', '', '', '2014-05-24 14:22:44', '0000-00-00 00:00:00'),
+(73, '|0|2', '电影及电视', '', '', '2014-05-24 14:22:44', '0000-00-00 00:00:00'),
+(74, '|0|2', '音乐和乐器', '', '', '2014-05-24 14:22:44', '0000-00-00 00:00:00'),
+(75, '|0|2', '宠物与动物', '', '', '2014-05-24 14:22:44', '0000-00-00 00:00:00'),
+(76, '|0|2', '陶器和玻璃', '', '', '2014-05-24 14:22:44', '0000-00-00 00:00:00'),
+(77, '|0|2', '房地产', '', '', '2014-05-24 14:25:52', '0000-00-00 00:00:00'),
+(78, '|0|2', '服务业', '', '', '2014-05-24 14:25:52', '0000-00-00 00:00:00'),
+(79, '|0|2', '体育运动', '', '', '2014-05-24 14:25:52', '0000-00-00 00:00:00'),
+(80, '|0|2', '玩具及模型', '', '', '2014-05-24 14:25:52', '0000-00-00 00:00:00'),
+(81, '|0|2', '旅游及活动', '', '', '2014-05-24 14:25:52', '0000-00-00 00:00:00'),
+(82, '|0|2', '美术用品及设备', '', '', '2014-05-24 14:25:52', '0000-00-00 00:00:00'),
+(83, '|0|2', '雕刻与雕塑', '', '', '2014-05-24 14:25:52', '0000-00-00 00:00:00'),
+(84, '|0|2', '图纸及画画', '', '', '2014-05-24 14:25:52', '0000-00-00 00:00:00'),
+(85, '|0|2', '雕塑挂', '', '', '2014-05-24 14:25:52', '0000-00-00 00:00:00'),
+(86, '|0|2', '绘画', '', '', '2014-05-24 14:25:52', '0000-00-00 00:00:00'),
+(87, '|0|2', '摄影及照片集', '', '', '2014-05-24 14:27:41', '0000-00-00 00:00:00'),
+(88, '|0|2', '打印', '', '', '2014-05-24 14:27:41', '0000-00-00 00:00:00'),
+(89, '|0|2', '刺青', '', '', '2014-05-24 14:27:41', '0000-00-00 00:00:00'),
+(90, '|0|2', '其它', '', '', '2014-05-24 14:27:41', '0000-00-00 00:00:00'),
+(91, '|0|2', '', '', '', '2014-05-24 14:27:41', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+`id` int(64) NOT NULL,
+  `father_id` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `category_name` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `url` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `keyword` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profiles`
+--
+
+CREATE TABLE `profiles` (
+`id` int(64) NOT NULL,
+  `profile_name` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `city` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `country` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `profile_photo_url` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `about_me` varchar(5000) COLLATE utf8_unicode_ci NOT NULL,
+  `facebook_url` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `twitter_url` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `google_url` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `linkin_url` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `other_site_url` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `uid` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `profiles`
+--
+
+INSERT INTO `profiles` (`id`, `profile_name`, `city`, `country`, `profile_photo_url`, `about_me`, `facebook_url`, `twitter_url`, `google_url`, `linkin_url`, `other_site_url`, `create_at`, `updated_at`, `uid`) VALUES
+(1, 'wicky', 'auckland', '', '', '', '', '', '', '', '', '2015-04-09 00:10:51', '0000-00-00 00:00:00', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+`id` int(10) unsigned NOT NULL,
+  `email` text COLLATE utf8_unicode_ci NOT NULL,
+  `username` text COLLATE utf8_unicode_ci NOT NULL,
+  `password` text COLLATE utf8_unicode_ci NOT NULL,
+  `password_temp` text COLLATE utf8_unicode_ci NOT NULL,
+  `code` text COLLATE utf8_unicode_ci NOT NULL,
+  `active` int(11) NOT NULL,
+  `remember_token` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `username`, `password`, `password_temp`, `code`, `active`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'beini.gao@gmail.com', 'wicky', '$2y$10$yl5UNc7Z6/485OsVUA3Di.Mfy3pWzGSw4Lq4yWD/COKKdsGCi5/PC', '', '', 1, 'yKBFYHCmgCwh6IorNbIsDhreiDiDiaoOLyj3NgTcBVF2O0vSPGfgDhm0Qre1', '2015-04-02 21:27:53', '2015-04-13 23:19:48'),
+(2, '1@gmail.com', 'oooodhey', '$2y$10$zn0SKymAQxpJ', '$2y$10$zn0SKymAQxpJ', '', 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `want`
+--
+
+CREATE TABLE `want` (
+`id` int(64) NOT NULL,
+  `uid` int(64) NOT NULL,
+  `name` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `type` int(64) NOT NULL,
+  `product_type` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `pic_group_id` int(11) NOT NULL,
+  `pic_url` varchar(3000) COLLATE utf8_unicode_ci NOT NULL,
+  `pic_title` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `pic_desc` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+  `pic_jump_url` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+  `ask_price` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `product_descriot` varchar(5000) COLLATE utf8_unicode_ci NOT NULL,
+  `start_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `close_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `product_active` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `video_url` varchar(5000) COLLATE utf8_unicode_ci NOT NULL,
+  `rid` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+  `reply_id` int(11) NOT NULL,
+  `want_type` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wants`
+--
+
+CREATE TABLE `wants` (
+`id` int(64) NOT NULL,
+  `uid` int(64) NOT NULL,
+  `name` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `type` int(64) NOT NULL,
+  `product_type` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `pic_group_id` int(11) NOT NULL,
+  `pic_url` varchar(3000) COLLATE utf8_unicode_ci NOT NULL,
+  `pic_title` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `pic_desc` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+  `pic_jump_url` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+  `ask_price` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `product_descript` varchar(5000) COLLATE utf8_unicode_ci NOT NULL,
+  `start_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `close_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `product_active` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `video_url` varchar(5000) COLLATE utf8_unicode_ci NOT NULL,
+  `rid` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+  `reply_id` int(11) NOT NULL,
+  `want_type` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=203 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `wants`
+--
+
+INSERT INTO `wants` (`id`, `uid`, `name`, `type`, `product_type`, `pic_group_id`, `pic_url`, `pic_title`, `pic_desc`, `pic_jump_url`, `ask_price`, `product_descript`, `start_time`, `close_time`, `product_active`, `created_at`, `updated_at`, `video_url`, `rid`, `reply_id`, `want_type`) VALUES
+(44, 1, 'City3室一厅$530起，全部明亮大双人房，分租$190起，包冷热水电家具', 0, 'Antiques & Collectables ', 0, 'img/upload/8.jpg', 'testsdfsdfds', 'too much testsdfsdfdstestsdfsdfdstestsdfsdfdstestsdfsdfdstestsdfsdfdstestsdfsdfdstestsdfsdfdstestsdfsdfdstestsdfsdfdstestsdfsdfdstestsdfsdfdstestsdfsdfds sdf', '', '345', '我自己在City的几套公寓想找安静的学生入住（即可入住，想6月或者7月入住提前订好也可以）整租或者分租 ! a: L% J- n3 Y, z0 X\r\n       三间都是明亮大床双人房，都有窗子透气透阳光。 \r\n即可入住，也可预订，整租$530起包冷热水，4人住3房$135起，提供全套家具。$ E% h4 T. _+ F\r\n\r\n分租即可入住，预订也可以，$190起包冷热水电家具。\r\n两房一厅两卫浴整租$420起( Out of Order ), Y+ a" j. o1 k'' [) U\r\n\r\nStudio (Last one from 5th June) $320起，均包冷热水电家具。3 t6 T) x! x0 n; D" Z  o6 A\r\n1 n4 x1 K6 {5 Q, [5 h\r\n市中心好地段，紧邻Queen St，极近AUT，Taylors, ACG, 维特, NSIA, Regent, UUNZ, ICL, Crown以及City其他学校，位置极佳。\r\n每天还有超市购物BUS免费接送，购物极其方便。隔壁有便利店,楼下有奶茶店和餐厅。\r\n独立厨房，可煮食，独立浴室，独立厕所，Heater，每间屋子家具齐全。) j、\r\n酒店式前台24小时贴心服务，刷卡出入，非常安全。\r\n电影室，乒乓球室，会议室免费提供使用。\r\n物业清洁公司每天做大楼清洁，每周做房内清洁。\r\n电话，高速无线网络（12兆带宽，全纽最快，比警察局还快）直接开通，不需要签约，无申请费安装费." c9 m" e& h& l+ [# d. F$ {; C6 G" n/ B8 v% S2 z! x\r\n          其他具体面议商量，只要能喜欢就好。+ d: T# f: [) }1 R\r\n长期入住，即刻送一套厨房用品。\r\n欢迎看房，短信，电话联系均可 Jerry 0226500353( l! |: a', '2014-05-17 05:49:48', '0000-00-00 00:00:00', 'yes', '2014-05-01 01:34:26', '2014-05-01 01:34:26', '', '', 0, 'want_to_buy'),
+(45, 0, '234234', 0, 'Antiques & Collectables ', 0, 'img/upload/1.jpg', '', '', '', '23432', '234234', '2014-05-17 05:50:03', '0000-00-00 00:00:00', 'yes', '2014-05-01 01:34:39', '2014-05-01 01:34:39', '', '', 0, 'want_to_buy'),
+(46, 0, '234', 0, 'Health & Beauty ', 0, 'img/upload/9.jpg', '', '', '', '23423', '234234', '2014-05-17 05:50:45', '0000-00-00 00:00:00', 'yes', '2014-05-01 01:34:49', '2014-05-01 01:34:49', '', '', 0, 'want_to_buy'),
+(48, 0, '[招聘] 诚聘服务员 [复制链接]', 0, 'Gaming ', 0, 'img/upload/1.jpg', '', '周一至周五 白天\r\n\r\n地址： 932 new north rd, mt Albert\r\n\r\n详细情况请致电联系 或者 到店里直接询问\r\n\r\n联系电话： 09-8151725 or 0275230388 注明 应聘 谢谢'' ?', '', '3453', '招聘\r\n公司名称:	-\r\n工作地点:	-\r\n职位:	-\r\n薪金:	新西兰法定最低工资\r\n工作性质:	-\r\n联系方式:	09-8151725\r\n工作时间:	-\r\n[backcolor=rgba(255, 255, 255, 0)]诚聘服务员 \r\n[backcolor=rgba(255, 255, 255, 0)]\r\n\r\n周一至周五 白天\r\n\r\n地址： 932 new north rd, mt Albert\r\n\r\n详细情况请致电联系 或者 到店里直接询问\r\n\r\n联系电话： 09-8151725 or 0275230388 注明 应聘 谢谢'' ', '2014-05-17 05:50:56', '0000-00-00 00:00:00', 'yes', '2014-05-01 01:38:57', '2014-05-01 01:38:57', '', '', 0, 'want_to_sell'),
+(68, 0, 'tew', 0, 'Flatmates Wanted ', 0, 'img/upload/7.jpg', '', '', '', '0', 'werew', '2014-05-17 05:51:21', '0000-00-00 00:00:00', 'yes', '2014-05-01 02:32:36', '2014-05-01 02:32:36', '', '', 0, 'want_a_partner'),
+(76, 0, 'test4', 0, 'Books ', 0, 'img/upload/7.jpg', '', '', '', '23', 'Designed expressly for the woman of the house, this suite features an egg-shaped tub and basin, and a walk-in wardrobe to die for', '2014-05-17 05:51:14', '0000-00-00 00:00:00', 'yes', '2014-05-01 04:45:17', '2014-05-01 04:45:17', '', '', 0, 'want_a_job'),
+(80, 2, 'ewr', 0, 'Farming ', 0, 'img/upload/6.jpg', '', '', '', '234', '234234234234', '2014-05-17 05:51:44', '0000-00-00 00:00:00', 'yes', '2014-05-01 05:54:44', '2014-05-01 05:54:44', '', '', 0, 'want_sb_to_do'),
+(81, 2, 'ertre', 0, 'Home & Living ', 0, 'img/upload/1.jpg', '', '', '', '345', 'ert', '2014-05-17 05:51:35', '0000-00-00 00:00:00', 'yes', '2014-05-01 06:05:22', '2014-05-01 06:05:22', '', '', 0, 'want_a_team'),
+(117, 1, '[市区] CT 一单人房出租（5月底可入住）有诚意的价格商量', 0, 'Antiques & Collectables ', 0, 'img/upload/19.jpg', '', 'job description', '', '23', '位于20 upper Queen street 的复式现一单人房招房客~欢迎看房！\r\n很不错的复式楼     一楼是客厅&厨房， 二楼是2间卧室（一个双人房一个单人房）&1个卫生间（与室友share卫生间），两个房间都是向阳的！家门口还有一个不小的花园~~~\r\n\r\n这是一个在city难得安静的小型复式楼~~交通方便，楼下就是一巨大停车场，有朋友来家里不用愁没车位！！！\r\n步行2 分钟就能到city link总站以及蔡林楠)\r\n步行5--10 分钟就能到AUT，ACG，泰勒，奥大，以及困街上各个预科语言学校\r\n现出租一单人房，招一女房客（长租短租都可！！！），室友是在泰勒上学的女生 网是telecom 500g 的，可煮食（前提是煮完要把厨房收拾干净。）免宠。', '2014-05-17 06:03:27', '0000-00-00 00:00:00', 'yes', '2014-05-02 21:39:50', '2014-05-02 21:39:50', '', '', 0, 'want_a_partner'),
+(118, 1, 'glenfield楼下一双人房，一单人房出租', 0, 'Antiques & Collectables ', 0, 'img/upload/13.jpg', '', '', '', '123', 'Glenfiel一楼双人房一间，单人房一间 双人房单人$130双人$180,单人房$100\r\n包水电网基本家具，附近有华人洋人超市，华人超市走路可去，门口公车站可到takapuna  albany,到ct的bus站要走十几分钟，三分钟上高速，西湖校区，目前有房客短租一个月，所以5月23号可入住\r\n地址是9k view road ,glenfield" a1\r\n电话022  4762777\r\n)', '2014-05-17 06:03:52', '0000-00-00 00:00:00', 'yes', '2014-05-02 21:40:07', '2014-05-02 21:40:07', '', '', 0, 'want_a_partner'),
+(119, 1, '3', 0, 'Antiques & Collectables ', 0, 'img/upload/13.jpg', '', '', '', '0', '', '2014-05-17 05:51:51', '0000-00-00 00:00:00', 'yes', '2014-05-02 21:41:19', '2014-05-02 21:41:19', '', '', 0, 'want_sb_to_do'),
+(122, 1, '123', 0, 'Antiques & Collectables ', 0, 'img/upload/19.jpg', '', '', '', '0', '', '2014-05-17 05:52:02', '0000-00-00 00:00:00', 'yes', '2014-05-02 21:50:01', '2014-05-02 21:50:01', '', '', 0, 'want_other'),
+(126, 1, '234', 0, 'Antiques & Collectables ', 0, 'img/upload/20.jpg', '', '', '', '0', '', '2014-05-17 05:51:30', '0000-00-00 00:00:00', 'yes', '2014-05-02 21:53:28', '2014-05-02 21:53:28', '', '', 0, 'want_a_team'),
+(127, 1, '234', 0, 'Antiques & Collectables ', 0, 'img/upload/14.jpg', '', '', '', '0', '', '2014-05-17 05:52:09', '0000-00-00 00:00:00', 'yes', '2014-05-02 21:54:42', '2014-05-02 21:54:42', '', '', 0, 'want_other'),
+(154, 1, '新三國第64集國語', 0, 'Antiques & Collectables ', 0, 'img/upload/59947849b642tiV6toto_350x467.jpg', '', 'tesxts sdfsdf', '', '345', '曹操是伪小人，真君子。刘备是装君子，却以假乱真。\r\n不管他们自己是不是小人，他们喜欢的都是君子。你看他们最信赖的谋士武将，无不才华出众，而且品德高贵。能让这么一群有德有才的人真心信服，终生追随，曹孙刘绝不是平庸肤浅之辈。﻿56sdfsdfdsdsdfsdfds', '2014-05-17 06:00:18', '0000-00-00 00:00:00', 'yes', '2014-05-15 19:45:21', '2014-05-15 19:45:21', '//www.youtube.com/embed/ILmV1cse7pY', '', 0, 'want_to_sell'),
+(162, 1, 'tttttttt', 0, 'Antiques & Collectables ', 0, 'img/upload/e22667170ae7ZlsS18.jpg', '', '', '', '48837', 'asdfasfd', '2014-05-25 03:46:45', '0000-00-00 00:00:00', 'yes', '2014-05-16 17:29:26', '2014-05-16 17:29:26', '', '', 0, 'want to sell'),
+(163, 1, 'tttttttt', 0, 'Antiques & Collectables ', 0, 'img/upload/8ca3e3f336c8IVrm18.jpg', '', '', '', '123', 'asdfasfd', '2014-05-24 13:00:41', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:04:57', '2014-05-16 18:04:57', '', '', 0, 'want_to_sell'),
+(164, 1, 'tttttttt', 0, 'Antiques & Collectables ', 0, 'img/upload/21f992c032e78Wyz18.jpg', '', '', '', '12321', 'asdfasfd', '2014-05-24 13:02:32', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:07:31', '2014-05-16 18:07:31', '', '', 0, 'want_to_sell'),
+(165, 1, 'tttttttt', 0, 'Antiques & Collectables ', 0, 'img/upload/21f992c032e7CMp518.jpg', '', '', '', '123', 'asdfasfd', '2014-05-24 13:01:50', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:07:31', '2014-05-16 18:07:31', '', '', 0, 'want_to_sell'),
+(166, 1, 'sdfa', 0, 'Books ', 0, 'img/upload/2c76220c2bfexWEC15.jpg', '', '', '', '123', '123123', '2014-05-17 06:11:24', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:11:24', '2014-05-16 18:11:24', '', '', 0, 'want_to_recruit'),
+(167, 1, '123', 0, 'Building & Renovation ', 0, 'img/upload/863fd0d18e29N57313.jpg', '', '', '', '12', '', '2014-05-17 06:11:46', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:11:46', '2014-05-16 18:11:46', '', '', 0, 'want_to_recruit'),
+(168, 1, '123', 0, 'Art ', 0, 'img/upload/39a83a7e64f9kKQy14.jpg', '', '', '', '0', '', '2014-05-17 06:12:38', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:12:38', '2014-05-16 18:12:38', '', '', 0, 'want_a_team'),
+(169, 1, '432', 0, 'Baby Gear ', 0, 'img/upload/cf6fc3011c0bSws612.jpg', '', '', '', '0', '', '2014-05-17 06:13:06', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:13:06', '2014-05-16 18:13:06', '', '', 0, 'want_a_team'),
+(170, 1, '23423', 0, 'Antiques & Collectables ', 0, 'img/upload/6ed2a739fbb33s6019.jpg', '', '', '', '0', '', '2014-05-17 06:13:19', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:13:19', '2014-05-16 18:13:19', '', '', 0, 'want_sb_to_do'),
+(171, 1, '345', 0, 'Clothing & Fashion ', 0, 'img/upload/1f8af58b701dNkcl22.jpg', '', '', '', '0', 'sdfdsf', '2014-05-17 06:32:49', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:13:57', '2014-05-16 18:13:57', '', '', 0, 'want_sb_to_do'),
+(172, 1, '34', 0, 'Crafts ', 0, 'img/upload/676532df506ccagW18.jpg', '', '', '', '0', '', '2014-05-17 06:14:17', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:14:17', '2014-05-16 18:14:17', '', '', 0, 'want_other'),
+(173, 1, '345', 0, 'Computers ', 0, 'img/upload/9e37f66c7c89L6rs14.jpg', '', '', '', '345', '', '2014-05-17 06:14:35', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:14:35', '2014-05-16 18:14:35', '', '', 0, 'want_a_partner'),
+(174, 1, '345', 0, 'Books ', 0, 'img/upload/b23a2c0d059dyPY018.jpg', '', '', '', '0', '', '2014-05-17 06:14:56', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:14:56', '2014-05-16 18:14:56', '345', '', 0, 'want_a_job'),
+(175, 1, '345', 0, 'Building & Renovation ', 0, 'img/upload/67f7fb23f082R8xK14.jpg', '', '', '', '0', '', '2014-05-17 06:15:15', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:15:15', '2014-05-16 18:15:15', '', '', 0, 'want_to_sell'),
+(176, 1, '345', 0, 'Antiques & Collectables ', 0, 'img/upload/7bae9fe31225zIhu19.jpg', '', '', '', '0', '', '2014-05-17 06:15:29', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:15:29', '2014-05-16 18:15:29', '', '', 0, 'want_to_sell'),
+(177, 1, '345', 0, 'Building & Renovation ', 0, 'img/upload/b4cedc61d27cqWBC16.jpg', '', '', '', '0', '', '2014-05-17 06:15:42', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:15:42', '2014-05-16 18:15:42', '', '', 0, 'want_to_sell'),
+(178, 1, '345', 0, 'Antiques & Collectables ', 0, 'img/upload/13ed1a4146d9ZjFR15.jpg', '', '', '', '0', '', '2014-05-17 06:16:04', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:16:04', '2014-05-16 18:16:04', '', '', 0, 'want_to_sell'),
+(179, 1, '345', 0, 'Business & Industry ', 0, 'img/upload/f941a59ca90faErH14.jpg', '', '', '', '0', '', '2014-05-17 06:16:25', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:16:25', '2014-05-16 18:16:25', '', '', 0, 'want_to_recruit'),
+(180, 1, 'asdsa1231', 0, 'Books ', 0, 'img/upload/84cfd601a0dc8xkC14.jpg', '', '', '', '0', '', '2014-06-02 03:41:26', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:18:19', '2014-05-16 18:18:19', '', '', 0, 'want_to_buy'),
+(181, 1, 'sdfsd', 0, 'Computers ', 0, 'img/upload/5a127c44958d7p8Q13.jpg', '', '', '', '0', 'sdf', '2014-05-22 10:06:58', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:18:36', '2014-05-16 18:18:36', '', '', 0, 'want_to_recruit'),
+(182, 1, 'xcvcx', 0, 'Clothing & Fashion ', 0, 'img/upload/7eac61ff73ccedks21d2cf7.jpg', '', '', '', '0', '', '2014-05-17 06:18:50', '0000-00-00 00:00:00', 'yes', '2014-05-16 18:18:50', '2014-05-16 18:18:50', '', '', 0, 'want_other'),
+(183, 1, 'iphone5', 0, 'Mobile Phones ', 0, 'img/upload/327cdd84bc2dGjmD16.jpg', '', '', '', '123', 'sdfds', '2014-05-18 12:40:16', '0000-00-00 00:00:00', 'yes', '2014-05-16 19:39:28', '2014-05-16 19:39:28', '//www.youtube.com/embed/bkx9kCdaaMg', '', 0, 'want_to_sell'),
+(184, 1, '船123', 0, 'Cars & Bikes & Boats ', 0, 'img/upload/45d76dcbcabbmDpW17.jpg', '', '', '', '123', '', '2014-05-18 12:35:57', '0000-00-00 00:00:00', 'yes', '2014-05-16 21:43:08', '2014-05-16 21:43:08', '', '', 0, 'want_to_sell'),
+(185, 3, 'sdfds', 0, 'Cars & Bikes & Boats ', 0, 'img/upload/3a86b23976d5OVLV16.jpg', '', '', '', '0', '', '2014-05-17 19:47:19', '0000-00-00 00:00:00', 'yes', '2014-05-17 07:47:19', '2014-05-17 07:47:19', '', '', 0, 'want_to_sell'),
+(186, 3, 'cvb', 0, 'Baby Gear ', 0, 'img/upload/78f209df3b15AxN415.jpg', '', '', '', '0', '', '2014-05-17 19:48:34', '0000-00-00 00:00:00', 'yes', '2014-05-17 07:48:34', '2014-05-17 07:48:34', '', '', 0, 'want_to_sell'),
+(187, 1, 'asdasda', 0, 'Antiques & Collectables ', 0, 'img/upload/3bd2db5f0a421I6c14.jpg', '', '', '', '123', '1234567890123456789', '2014-05-25 10:49:48', '0000-00-00 00:00:00', 'yes', '2014-05-18 00:41:03', '2014-05-18 00:41:03', '', '', 0, 'want_to_sell'),
+(188, 1, '23', 0, 'Books ', 0, '', '', '', '', '12', '123213123', '2014-06-14 12:13:30', '0000-00-00 00:00:00', 'yes', '2014-06-14 00:13:30', '2014-06-14 00:13:30', '', '', 0, 'want_to_sell'),
+(189, 1, '234', 0, 'Art ', 0, 'img/test/4cc82IE8I1.txt', '', '', '', '2134', '23432', '2014-06-15 02:43:55', '0000-00-00 00:00:00', 'yes', '2014-06-14 14:39:59', '2014-06-14 14:39:59', '//www.youtube.com/embed/2kKC31rW0TI,//www.youtube.com/embed/2kKC31rW0TI,//www.youtube.com/embed/2kKC31rW0TI', '', 0, 'want_to_sell'),
+(190, 1, 'beautiful', 0, 'Art ', 0, 'img/test/5a73fYnvH1402800384.jpg,img/test/48562fIej1402800390.jpg,img/test/ae612XZxy2.txt', '', '', '', '10002', ' just costs you 1000$ to get this beautiful girlfdfgd gdf', '2014-06-15 03:15:43', '0000-00-00 00:00:00', 'yes', '2014-06-14 14:52:24', '2014-06-14 14:52:24', '//www.youtube.com/embed/2kKC31rW0TI,//www.youtube.com/embed/6BOSogO5qrg,//www.youtube.com/embed/AVZwkV9PIPg?list=PLtFDvh1SGFq_twhqN07ovGn3ZQ7i5uCRI', '', 0, 'want_to_sell'),
+(191, 4, 'Tytyrre', 0, 'Clothing & Fashion ', 0, '', '', '', '', '12345', 'Yttrrdfghu', '2014-06-15 05:36:39', '0000-00-00 00:00:00', 'yes', '2014-06-14 17:36:39', '2014-06-14 17:36:39', '', '', 0, 'want_to_sell'),
+(192, 8, 'motel manager', 0, 'Jobs ', 0, 'img/test/9c895A5Ya3.txt,img/test/c7846iqH51402800387.jpg,img/test/99fc3kNPp1402800375.jpg', '', '', '', '17/hour', '  bghkhkhkhgchgvvbjhbgghghbjhbjhbbbbbbbjbjhbjhbjbjbhjhjhbjhbjhbjbknvlnfdlbnbngfnblgfnblfglbjlblnglengltengbngbnelbnlenglbenlngblenlenlgnerlgnlrenglvnrlgfnlrengvlrnglnrelnglrnglrfnlgvnlrngvlngvnrgnlnvlnvlnlvnlfnvnvnvnrhgrnvnvndnvnvnlnlngvlhglngvnfvnfjdhvhekbvkfdnvndfkvnkdfnvkdfnvknfdlnvfnvnfdknkfnvkfdnvknfdkvnkdfnvknfkvnkfdnkfdnvkdfkvkdfnvkfndkvnkfdnvkfdnvknfdkvnkdfnvknfdknvkdfnkvndfknvkdfnvkdnfknvkdkvnknkfnvknfdknvfdnvkfndkvnkdfhvkdfnvknfdknvkfdnvkfdnkvndfnvknfdkjvhkdfnvkdfvkdfkvnkdfnvkhdfkvnkfdnvrnvknfkvheknvkfdjnvenvknfdvhdkrfvnkdfnvkdvnkdfnvkdknfdknvkfdvkdnfkvnkdfnvkdfnvkfdnvkndfkvhkrfnvkfdnkvndfnvkfdnkvnkerkvnfdknvkdfnvenvkdfnvkndfnvkfdnvkndfkvkvnehgtrnbdfnvnenvfdnvkjfrvknkrfnkernvknfdivhnekrnvkdevngerngknerkfgnerfgdnkhergkrfkhregherngkfdjhbnerfnrewn kehfierh   erofgreogreoighrengfirefgerfhierfkrenfkerh  erferhfihreifgerknfgreiuhfirenjforefioheriuhfirehfiuheriufhirehgireuhfi iewrfhirehfih', '2014-07-02 12:51:58', '0000-00-00 00:00:00', 'yes', '2014-06-14 18:24:05', '2014-06-14 18:24:05', ' ', '', 0, 'want_a_job'),
+(194, 1, '', 0, 'Antiques & Collectables ', 0, 'img/test/10a73LGei3.txt,img/test/1601aRwSd2.txt', '', '', '', '', '', '2014-07-01 13:34:19', '0000-00-00 00:00:00', 'yes', '2014-07-01 01:28:59', '2014-07-01 01:28:59', '', '', 0, 'want_a_job'),
+(195, 1, 'mark', 0, 'Books ', 0, 'img/test/77b6dfbpT3.txt,img/test/2181eH8VT1402800384.jpg,img/test/c7f6dd3YL1402800387.jpg', '', '', '', '234', 'dfdgdfgfdfgregregerge', '2014-07-02 10:25:16', '0000-00-00 00:00:00', 'yes', '2014-07-01 22:18:25', '2014-07-01 22:18:25', '//www.youtube.com/embed/afRS2HA6sgI" frameborder="0" allowfullscreen></iframe>', '', 0, 'want_to_buy'),
+(196, 1, '', 0, 'Antiques & Collectables ', 0, 'img/test/3675cEafp3.txt,img/test/78c867kKq2.txt', '', '', '', '', '', '2014-07-02 11:50:19', '0000-00-00 00:00:00', 'yes', '2014-07-01 22:55:24', '2014-07-01 22:55:24', '', '', 0, 'want_to_buy'),
+(197, 1, '', 0, 'Antiques & Collectables ', 0, '', '', '', '', '', '', '2014-07-02 11:47:59', '0000-00-00 00:00:00', 'yes', '2014-07-01 23:47:59', '2014-07-01 23:47:59', '', '', 0, 'want_to_buy'),
+(198, 8, 'taideng', 0, 'Art ', 0, '', '', '', '', '23', 'good new taideng', '2014-07-02 13:01:13', '0000-00-00 00:00:00', 'yes', '2014-07-02 01:01:13', '2014-07-02 01:01:13', '', '', 0, 'want_to_sell'),
+(199, 22, '123213', 0, 'Flatmates Wanted ', 0, '', '', '', '', '123', 'sdfdsfds 123213', '2014-12-15 10:34:15', '0000-00-00 00:00:00', 'yes', '2014-12-14 21:11:37', '2014-12-14 21:11:37', '', '', 0, 'want_to_sell'),
+(200, 22, '123213', 0, 'Flatmates Wanted ', 0, '', '', '', '', '123', '123213', '2014-12-15 10:12:35', '0000-00-00 00:00:00', 'yes', '2014-12-14 21:12:35', '2014-12-14 21:12:35', '', '', 0, 'want_to_sell'),
+(201, 22, 'sdf', 0, 'Health & Beauty ', 0, '', '', '', '', '234', '234234', '2014-12-15 11:00:40', '0000-00-00 00:00:00', 'yes', '2014-12-14 22:00:40', '2014-12-14 22:00:40', '', '', 0, 'want_to_recruit'),
+(202, 22, 'sdf', 0, 'Health & Beauty ', 0, '', '', '', '', '234', '234234', '2014-12-15 11:03:18', '0000-00-00 00:00:00', 'yes', '2014-12-14 22:03:18', '2014-12-14 22:03:18', '', '', 0, 'want_to_sell');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `profiles`
+--
+ALTER TABLE `profiles`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `want`
+--
+ALTER TABLE `want`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wants`
+--
+ALTER TABLE `wants`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+MODIFY `id` int(64) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=92;
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+MODIFY `id` int(64) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `profiles`
+--
+ALTER TABLE `profiles`
+MODIFY `id` int(64) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `want`
+--
+ALTER TABLE `want`
+MODIFY `id` int(64) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `wants`
+--
+ALTER TABLE `wants`
+MODIFY `id` int(64) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=203;

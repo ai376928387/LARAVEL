@@ -1,0 +1,56 @@
+/*left menu */
+.header{
+	background: #353535;
+}
+.header ul{
+
+}
+.header ul li{
+
+}
+.header ul a{
+  font-size:1.5em;
+  color:#fff;
+}
+.header ul a.hover{
+  color:#B3B3B3;
+}
+
+/*right menu */
+.right-menu button{
+	font-size:1.5em;
+  color:#fff;
+  background: #353535;
+	height:50px;
+	border:none;
+}
+.right-menu {
+  float:right;
+}
+
+.right-menu #dropdownMenu1{
+  float:left;
+}
+.right-menu .dropdown-menu{
+	font-size:1.5em;
+  color:#fff;
+  background: #353535;
+  opacity:0.6;
+}
+.right-menu .dropdown-menu li a{
+  font-size:0.75em;
+}
+.view-cart{
+  float:left;
+}
+
+.view-cart a{
+  color:#fff;
+  background: #353535;
+}
+.container{
+  padding:0;
+}
+.row{
+  margin:0;
+}
